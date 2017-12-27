@@ -1,0 +1,217 @@
+.homeButton {
+    font-family: arial;
+    font-weight: 50;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+
+    border: solid 1px white;
+    border-radius: 50px;
+    padding: 8px 25px;
+
+    transition-duration: 200ms;
+}
+
+.homeButton:hover {
+    background-color: white;
+    color: grey;
+}
+
+.homeButton:active {
+    background-color: white;
+    color: white;
+}
+
+body {
+    background-color: white;
+}
+
+h1.heading {
+    color: rgb(128, 128, 128);
+    text-align: center;
+    font-size: 36px;
+    padding: 0;
+    font-family: arial;
+    font-weight: 50;
+}
+
+a.heading {
+    color: rgb(128, 128, 128);
+    text-align: center;
+    font-size: 48px;
+    padding: 0;
+    font-family: arial;
+    font-weight: 50;
+    text-decoration: none;
+}
+
+ul.heading {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-color: grey;
+}
+
+li.heading {
+    float: left;
+    font-size=36px;
+}
+
+li a.heading {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: arial;
+    font-weight: 500;
+    font-size: 20px;
+
+    border: solid .5px;
+    padding 8px 25px;
+}
+
+li a.heading:visited {
+    background-color: lightgrey;
+}
+
+li a.heading:hover {
+    background-color: grey;
+    color: white;
+}
+
+li a.heading:active {
+    background-color: white;
+}
+
+.galantis {
+    font-family: arial;
+    font-size: 64px;
+    font-weight: 300;
+    color: grey;
+}
+
+.text {
+    font-family: arial;
+    font-size: 24px;
+    font-weight: 50;
+    color: grey;
+}
+
+a.assignmentLink:link {
+    text-decoration: none;
+    font-family: arial;
+    font-size: 20px;
+    color: grey;
+}
+
+a.assignmentLink:visited {
+    background-color: black;
+    font-size: 30px;
+}
+
+a.assignmentLink:hover {
+    background-color: grey;
+    color: white;
+}
+
+a.assignmentLink:active {
+    background-color: darkgrey;
+}
+
+p.color {
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+
+    font-family: arial;
+    font-size: 24px;
+    font-weight: 50;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form select {
+    float: left;
+    padding: 14px 20px;
+    width: 30%;
+    border: solid 1px grey;
+    box-shadow: none;
+    background-color: grey;
+    border-radius: 4px;
+    background-image: none;
+    margin: 10%;
+
+    font-family: arial;
+    font-size: 24px;
+    font-weight: 50;
+    color: white
+}
+
+input[type=radio] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: grey;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: white;
+    transition-duration: 500ms;
+    color: grey;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border-radius: 5px;
+    border: 2px solid grey;
+    text-align: center;
+    padding: 8px;
+}

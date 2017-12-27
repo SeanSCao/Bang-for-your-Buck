@@ -1,0 +1,58 @@
+<ul class="heading">
+        <li class="heading"><a href="/plans" class="heading">All Plans</a></li>
+        <li class="heading"><a href="/create" class="heading">Create Plan</a></li>
+        <li class="heading"><a href="/compare" class="heading">Compare Plans</a></li>
+        <li class="heading"><a href="/signout" class="heading">Logout</a></li>
+    </ul>
+
+{{#each plans as |p|}}
+<div style="width:45%; float:left; margin-right: 3%;">
+    <h2 class="heading" style="text-align:center"><a class="heading" href="/plans/{{p.slug}}">{{p.title}}</a></h2>
+    <p class="text" style="text-align:center">Budget: {{p.budget}}</p>
+
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>New Cost</th>
+            <th>Used Cost</th>
+            <th>Quantity</th>
+        </tr>
+        {{#each p.items as |i|}}
+        <tr>
+            <td>
+                <p class="text">{{i.name}}</p>
+            </td>
+            <td>
+                <p class="text">{{i.newCost}}</p>
+            </td>
+            <td>
+                <p class="text">{{i.usedCost}}</p>
+            </td>
+            <td>
+                <p class="text">{{i.quantity}}</p>
+            </td>
+        </tr>
+        {{/each}}
+        <tr>
+            <td>
+                <p class="text">Totals</p>
+            </td>
+            <td>
+                <p class="text">{{p.newTotal}}</p>
+            </td>
+            <td>
+                <p class="text">{{p.usedTotal}}</p>
+            </td>
+            <td>
+                <p class="text">{{p.quantityTotal}}</p>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <p class="text">Notes:</p>
+        {{#each p.notes as |n| }}
+        <p class="text">{{n}}</p>
+        {{/each}}
+    </div>
+</div>
+{{/each}}

@@ -1,0 +1,17 @@
+<ul class="heading">
+        <li class="heading"><a href="/plans" class="heading">All Plans</a></li>
+        <li class="heading"><a href="/create" class="heading">Create Plan</a></li>
+        <li class="heading"><a href="/compare" class="heading">Compare Plans</a></li>
+        <li class="heading"><a href="/signout" class="heading">Logout</a></li>
+    </ul>
+
+<div class="form" style="content-align:center">
+    <form method="POST" name="createForm" action="/create" style="text-align:center;" onsubmit="return validateCreate();">
+        Title: <input type="text" name="title">
+        <br>Budget: <input type="number" name="budget">
+        <br>
+        <input type="submit">
+    </form>
+</div>
+
+<script src="validate.js"></script>

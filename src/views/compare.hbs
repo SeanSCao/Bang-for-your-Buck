@@ -1,0 +1,27 @@
+<ul class="heading">
+        <li class="heading"><a href="/plans" class="heading">All Plans</a></li>
+        <li class="heading"><a href="/create" class="heading">Create Plan</a></li>
+        <li class="heading"><a href="/compare" class="heading">Compare Plans</a></li>
+        <li class="heading"><a href="/signout" class="heading">Logout</a></li>
+    </ul>
+
+<div class="form" action="/compare">
+    <p class="text">Select Two Plans to Compare</p>
+    <form method="POST" name="compare" onsubmit="return validateCompare();" action="">
+        <select name="compare1">
+            {{#each plans as |p|}}
+    <option value={{p._id}}>{{p.title}}</option>
+            {{/each}}
+        </select>
+        <select name="compare2">
+            {{#each plans as |p|}}
+    <option value={{p._id}}>{{p.title}}</option>
+            {{/each}}
+        </select>
+        <br><br>
+        <input type="submit" value="Compare Plans">
+
+    </form>
+</div>
+
+<script src="validate.js"></script>

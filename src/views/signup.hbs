@@ -1,0 +1,15 @@
+<ul class="heading">
+        <li class="heading"><a href="/signup" class="heading">Sign Up</a></li>
+        <li class="heading"><a href="/" class="heading">Login</a></li>
+    </ul>
+
+<div class="form" style="content-align:center">
+    <form method="POST" name="signup" action="/signup" style="text-align:center;" onsubmit="return validateSignup();">
+        New Username: <input type="text" name="username">
+        <br>New Password: <input type="text" name="password">
+        <br>Confirm Password: <input type="text" name="password2">
+        <input type="submit">
+    </form>
+</div>
+
+<script src="validate.js"></script>

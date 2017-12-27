@@ -1,0 +1,90 @@
+<ul class="heading">
+        <li class="heading"><a href="/plans" class="heading">All Plans</a></li>
+        <li class="heading"><a href="/create" class="heading">Create Plan</a></li>
+        <li class="heading"><a href="/compare" class="heading">Compare Plans</a></li>
+        <li class="heading"><a href="/signout" class="heading">Logout</a></li>
+    </ul>
+
+{{#each plans as |p|}}
+<h2 class="heading" style="text-align:center"><a class="heading" href="/plans/{{p.slug}}">{{p.title}}</a></h2>
+<p class="text" style="text-align:center">Budget: {{p.budget}}</p>
+
+<form method="POST" action="/plans/del" name="itemDel" onsubmit="return validateItemDel()">
+    <table style="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>New Cost</th>
+            <th>Used Cost</th>
+            <th>Quantity</th>
+        </tr>
+        {{#each p.items as |i|}}
+        <tr>
+            <td><input type="checkbox" name="del" value={{i._id}}><span class="text">{{i.name}}</span></td>
+            <td>
+                <p class="text">{{i.newCost}}</p>
+            </td>
+            <td>
+                <p class="text">{{i.usedCost}}</p>
+            </td>
+            <td>
+                <p class="text">{{i.quantity}}</p>
+            </td>
+        </tr>
+        {{/each}}
+        <input type="hidden" name="slug" value={{p.slug}}>
+        <input type="submit" value="Delete Item">
+</form>
+{{/each}}
+<tr>
+    <td>
+        <p class="text">Totals</p>
+    </td>
+    <td>
+        <p class="text">{{newTotal}}</p>
+    </td>
+    <td>
+        <p class="text">{{usedTotal}}</p>
+    </td>
+    <td>
+        <p class="text">{{quantityTotal}}</p>
+    </td>
+</tr>
+</table>
+
+<form method="POST" action="/plans/del-note" name="noteDel" onsubmit="return validateNoteDel()">
+
+    <div>
+        <p class="text">Notes:</p>
+        {{#each plans as |p|}} 
+            {{#each p.notes as |n| }}
+                <input type="checkbox" name="del" value={{n}}><span class="text">{{n}}</span> <br>
+            {{/each}} 
+        <input type="hidden" name="slug" value={{p.slug}}>
+        <input type="submit" value="Delete Note">
+        {{/each}}
+    </div>
+</form>
+{{#each plans as |p|}}
+<div class="form" style="content-align:center">
+    <form method="POST" action="/plans/add" style="text-align:center;" name="itemForm" onsubmit="return validateItem()">
+        Item Name: <input type="text" name="name">
+        <br>New Cost: <input type="number" name="newCost">
+        <br>Used Cost: <input type="number" name="usedCost">
+        <br>Quantity: <input type="number" name="quantity">
+        <br>
+        <input type="hidden" name="slug" value={{p.slug}}>
+        <input type="submit" value="Add Item">
+    </form>
+</div>
+{{/each}} {{#each plans as |p|}}
+<div class="form" style="content-align:center">
+    <form method="POST" action="/plans/add-note" style="text-align:center;" name="noteForm" onsubmit="return validateNote()">
+        Note: <input type="text" name="note">
+        <br>
+        <input type="hidden" name="slug" value={{p.slug}}>
+        <input type="submit" value="Add Note">
+    </form>
+</div>
+{{/each}}
+
+<script src="../validate.js"></script>

@@ -1,0 +1,10 @@
+<ul class="heading">
+        <li class="heading"><a href="/plans" class="heading">All Plans</a></li>
+        <li class="heading"><a href="/create" class="heading">Create Plan</a></li>
+        <li class="heading"><a href="/compare" class="heading">Compare Plans</a></li>
+        <li class="heading"><a href="/signout" class="heading">Logout</a></li>
+    </ul>
+
+{{#each plans as |p|}}
+    <h2 class="heading"><a class="heading" href="/plans/{{p.slug}}">{{p.title}}</a></h2>
+{{/each}}
