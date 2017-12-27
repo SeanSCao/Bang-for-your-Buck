@@ -28,7 +28,6 @@ An Example List with Embedded Items:
 
 ```javascript
 {
-  user: "Sean"
   name: "Option1",
   budget: "500"
   items: [
@@ -40,7 +39,7 @@ An Example List with Embedded Items:
 ```
 
 
-## [Link to Commented First Draft Schema](src/db.js) 
+## [Link to Schema](src/db.js) 
 
 
 ## Wireframes
@@ -63,17 +62,13 @@ An Example List with Embedded Items:
 7. as a user, I can add notes to each plan explaining costs/benefits
 8. as a user, I can view how much my budget can support
 
-## Research Topics
+## Additional Components
 
-* (5 points) Integrate user authentication
+* Integrate user authentication
     * I'm going to be using passport for user authentication
-* (3 points) Perform client side form validation using a JavaScript library
-
-## [Link to Initial Main Project File](src/app.js) 
-
+* Perform client side form validation using a JavaScript library
 
 ## Annotations / References Used
-
 
 1. [passport.js authentication docs](http://passportjs.org/docs)
 
